@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { CarouselDemo } from "@/components/CarouselMain";
+import { ProductCarousel } from "@/components/ProductCarousel";
 import { Input } from "@/components/ui/input";
-import { AccordionDemo } from "@/components/Accordions";
+import { ProductAccordion } from "@/components/ProductAccordion";
 import { AlertDialogDemo } from "@/components/Alert";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
 
       {/*Carousel */}
       <section className="w-6/12 mx-auto flex justify-center items-center">
-        <CarouselDemo
+        <ProductCarousel
           images={[
             "/images/coat-1.jpg",
             "/images/sneakers-1.jpg",
@@ -49,12 +49,12 @@ export default function Home() {
             "/images/sweater-2.jpeg",
             "/images/trousers-1.jpg",
           ]}
-        ></CarouselDemo>
+        ></ProductCarousel>
       </section>
 
       {/*Accordion */}
       <section className="w-6/12 mx-auto flex justify-center items-center">
-        <AccordionDemo />
+        <p>No.</p>
       </section>
 
       {/* Alert Dialog */}

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import { CarouselDemo } from "@/components/CarouselMain";
-import { AccordionDemo } from "@/components/Accordions";
+import { ProductCarousel } from "@/components/ProductCarousel";
+import { ProductAccordion } from "@/components/ProductAccordion";
 import { products } from "@/data/products";
 import { notFound } from "next/navigation";
 
@@ -18,12 +18,12 @@ export default function ProductPage() {
     <main className="p-8 space-y-8 mt-20">
       {/*Carousel */}
       <section className="w-6/12 mx-auto flex justify-center items-center">
-        <CarouselDemo images={[product.image]}></CarouselDemo>
+        <ProductCarousel images={[product.image]}></ProductCarousel>
       </section>
 
       {/*Accordion */}
       <section className="w-6/12 mx-auto flex justify-center items-center">
-        <AccordionDemo />
+        <ProductAccordion product={product} />
       </section>
     </main>
   );
