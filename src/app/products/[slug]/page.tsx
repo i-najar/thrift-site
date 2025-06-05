@@ -17,9 +17,24 @@ export default function ProductPage() {
 
   return (
     <main className="p-8 space-y-8 mt-20">
-      {/* Carousel */}
-      <section className="w-6/12 mx-auto flex justify-center items-center">
-        <ProductCarousel images={[product.image]}></ProductCarousel>
+      {/* Product Detail Section */}
+
+      <section className="flex flex-col lg:flex-row justify-center items-start max-w-screen-lg mx-auto">
+        {/* Carousel */}
+        <div className="w-full lg:w-auto mr-10">
+          <ProductCarousel images={[product.image]}></ProductCarousel>
+        </div>
+
+        {/* Product Info */}
+        <div className="w-full lg:w-auto space-y-3">
+          <h1 className="text-2xl font-semibold">{product.name}</h1>
+          <p className="text-muted-foreground">Size: {product.size}</p>
+          <p className="text-muted-foreground">Color: {product.color}</p>
+          <p className="text-muted-foreground">
+            Condition: {product.condition}
+          </p>
+          <p className="text-xl font-bold">{product.price.toFixed(2)}</p>
+        </div>
       </section>
 
       {/* Accordion */}

@@ -8,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Product } from "@/data/products";
+import { StarRating } from "./StarRating";
 import Link from "next/link";
 
 type ProductCardProps = {
@@ -42,6 +43,11 @@ export function ProductCard({ product }: ProductCardProps) {
           <CardContent className="p-0 text-sm text-muted-foreground">
             {product.description}
           </CardContent>
+
+          <div className="pt-1">
+            <StarRating rating={product.rating ?? 0} />
+            <p>{product.size}</p>
+          </div>
         </div>
       </Card>
     </Link>

@@ -20,6 +20,7 @@ export function ProductReviews({ productSlug }: ProductReviewsProps) {
 
   if (productReviews.length === 0) {
     return <p className="text-muted-foreground">No reviews yet.</p>;
+    // add one of those placeholder component things
   }
 
   return (
