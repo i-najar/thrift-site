@@ -20,7 +20,7 @@ export function ProductCarousel({ images }: ProductCarouselProps) {
         {images.map((src, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <Card>
+              <Card className="rounded-none">
                 <CardContent className="flex items-center justify-center p-2">
                   <Image
                     src={src}
