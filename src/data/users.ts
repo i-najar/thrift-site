@@ -1,6 +1,7 @@
 export type Review = {
   productSlug: string;
   comment: string;
+  rating: number;
 };
 
 export type User = {
@@ -26,16 +27,19 @@ export const users: User[] = [
       {
         productSlug: "coat-1",
         comment: "Fluffy and fun! A little too large, but that's fine.",
+        rating: 4.5,
       },
       {
         productSlug: "sneakers-1",
         comment:
           "Fresh and comfortable! All my coworkers asked me where they're from. Well, haha, it's my little secret!",
+        rating: 5,
       },
       {
         productSlug: "sweater-1",
         comment:
           "Really warm. Like, really, REALLY warm. Makes me feel like a toaster strudel, haha!",
+        rating: 4.8,
       },
     ],
   },
@@ -50,10 +54,12 @@ export const users: User[] = [
       {
         productSlug: "coat-1",
         comment: "Mmh... good i guess...",
+        rating: 3,
       },
       {
         productSlug: "sweater-2",
         comment: "hmph... not bad...",
+        rating: 4,
       },
     ],
   },
@@ -68,14 +74,17 @@ export const users: User[] = [
       {
         productSlug: "sneakers-1",
         comment: "YEAHHHHHHHHHHHHHHHHHHHHHHHHH",
+        rating: 5,
       },
       {
         productSlug: "trousers-1",
         comment: "COOL COOL COOL COOOOOOOOOOOOL",
+        rating: 5,
       },
       {
         productSlug: "coat-1",
         comment: "BRR BRR HAHA JK WARMM",
+        rating: 5,
       },
     ],
   },
@@ -90,14 +99,17 @@ export const users: User[] = [
       {
         productSlug: "coat-1",
         comment: "nice and warm. good quality--would buy again",
+        rating: 4.5,
       },
       {
         productSlug: "sneakers-1",
         comment: "chic and works with any wardrobe tbh",
+        rating: 5,
       },
       {
         productSlug: "sweater-2",
         comment: "comfy but the packaging was kinda meh",
+        rating: 4.2,
       },
     ],
   },
@@ -112,22 +124,22 @@ export const users: User[] = [
       {
         productSlug: "coat-1",
         comment: "flmaegpj-09j30t9j2-",
-      },
-      {
-        productSlug: "sneakers-1",
-        comment: "9i-0trf9oikekfoooooooooopoo    okkkkkkkkkkk",
+        rating: 0,
       },
       {
         productSlug: "sweater-1.jpg",
         comment: "ef098uiw09u809u8iwfu098efw",
+        rating: 4.8,
       },
       {
         productSlug: "sweater-2",
         comment: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalpppppppppppppppppppp;",
+        rating: 4.3,
       },
       {
         productSlug: "trousers-1",
         comment: "jipfjipejige",
+        rating: 4.7,
       },
     ],
   },

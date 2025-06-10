@@ -27,7 +27,7 @@ export function ProductReviews({ productSlug }: ProductReviewsProps) {
       {productReviews.map((r, i) => (
         <div
           key={i}
-          className="flex items-start space-x-4 p-4 border rounded-lg"
+          className="flex items-start space-x-4 p-4 border rounded-none"
         >
           <UserAvatar src={r.avatar} fallback={r.name[0]} />
           <div>
