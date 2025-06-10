@@ -1,17 +1,21 @@
 "use client";
 import { useState } from "react";
 import { useParams } from "next/navigation";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { ProductAccordion } from "@/components/ProductAccordion";
 import { ProductReviews } from "@/components/ProductReviews";
 import { products } from "@/data/products";
+import { users } from "@/data/users";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 export default function ProductPage() {
   const params = useParams();
   const slug = params!.slug as string;
 
   const product = products.find((p) => p.slug === slug);
+  const user = users.find((u) => u.id === product?.userId);
 
   if (!product) return notFound();
 
@@ -34,6 +38,20 @@ export default function ProductPage() {
             Condition: {product.condition}
           </p>
           <p className="text-xl font-bold">{product.price.toFixed(2)}</p>
+          {user && (
+            <Link
+              href={`/users/${user.slug}`}
+              className="flex items-center space-x-2 group mt-2 transition hover:text-blue-600"
+            >
+              <Avatar className="w-6 h-6">
+                <AvatarImage src={user.avatar} alt={user.name} />
+                <AvatarFallback>{user.name[0]}</AvatarFallback>
+              </Avatar>
+              <span className="text-sm group-hover:underline">
+                View seller: {user.name}
+              </span>
+            </Link>
+          )}
         </div>
       </section>
 

@@ -9,6 +9,7 @@ export type Product = {
   size: string;
   color: string;
   condition: string;
+  userId: string;
 };
 
 export const products: Product[] = [
@@ -23,6 +24,7 @@ export const products: Product[] = [
     size: "M",
     color: "Off-white",
     condition: "New",
+    userId: "4",
   },
   {
     id: "2",
@@ -35,6 +37,7 @@ export const products: Product[] = [
     size: "L",
     color: "Striped B&W",
     condition: "Used",
+    userId: "3",
   },
   {
     id: "3",
@@ -48,6 +51,7 @@ export const products: Product[] = [
     size: "XS",
     color: "Brown",
     condition: "New",
+    userId: "6",
   },
   {
     id: "4",
@@ -60,5 +64,6 @@ export const products: Product[] = [
     size: "M",
     color: "Brown",
     condition: "New",
+    userId: "4",
   },
 ];
