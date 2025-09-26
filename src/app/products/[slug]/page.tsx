@@ -25,7 +25,7 @@ export default function ProductPage() {
 
       <section className="flex flex-col lg:flex-row justify-center items-start max-w-screen-lg mx-auto">
         {/* Carousel */}
-        <div className="w-full lg:w-auto mr-10">
+        <div className="w-full lg:w-auto mr-10 pr-5">
           <ProductCarousel images={[product.image]}></ProductCarousel>
         </div>
 

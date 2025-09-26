@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { SearchBar } from "./SearchBar";
+import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   return (
@@ -9,7 +10,10 @@ export function Navbar() {
       <Link href="/" className="text-xl font-bold">
         threadBare
       </Link>
-      <SearchBar />
+      <div className="flex items-center gap-2">
+        <SearchBar />
+        <Button variant="default">Search</Button>
+      </div>
       <div className="space-x-4">
         <Link href="/products" className="text-sm hover:underline">
           Browse
