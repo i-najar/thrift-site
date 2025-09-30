@@ -10,6 +10,7 @@ export type Product = {
   color: string;
   condition: string;
   userId: string;
+  categories: string[];
 };
 
 export const products: Product[] = [
@@ -25,6 +26,7 @@ export const products: Product[] = [
     color: "Off-white",
     condition: "New",
     userId: "4",
+    categories: ["knitwear", "sweater"],
   },
   {
     id: "2",
@@ -38,6 +40,7 @@ export const products: Product[] = [
     color: "Striped B&W",
     condition: "Used",
     userId: "3",
+    categories: ["sweater", "jumper"],
   },
   {
     id: "3",
@@ -52,6 +55,7 @@ export const products: Product[] = [
     color: "Brown",
     condition: "New",
     userId: "6",
+    categories: ["outerwear", "coat"],
   },
   {
     id: "4",
@@ -65,6 +69,7 @@ export const products: Product[] = [
     color: "Brown",
     condition: "New",
     userId: "4",
+    categories: ["bottoms", "trousers"],
   },
   {
     id: "5",
@@ -78,5 +83,6 @@ export const products: Product[] = [
     color: "900uj3098",
     condition: "New",
     userId: "5",
+    categories: ["sneakers", "footwear", "shoes"],
   },
 ];
