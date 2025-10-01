@@ -30,7 +30,7 @@ export default function ProductsPage() {
   return (
     <section className="p-6 flex">
       {/* Sidebar */}
-      <div className="w-64 pr-4">
+      <div className="w-64 pr-4 sticky top-20">
         <h1 className="text-2xl font-bold mb-4">Browse Products</h1>
         <FilterAccordion
           filters={filters}

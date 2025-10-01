@@ -151,4 +151,20 @@ export const users: User[] = [
     bio: "Greetings. My name is John Smith. I like to walk with my legs and look around the environment using my eyes. Many others like you and me have bought the physical goods I am distributing on this website.",
     rating: 4.6,
   },
+  {
+    id: "7",
+    name: "The Alligator",
+    slug: "the-alligator",
+    avatar: "/images/avatars/user-7.png",
+    bio: "The Alligator sells products procured by yours truly (The Alligator).",
+    rating: 3,
+  },
+  {
+    id: "8",
+    name: "Cleo",
+    slug: "cleo",
+    avatar: "/images/avatars/user-8.png",
+    bio: "A Marmoreal Wanderer With An Interest in Fashion",
+    rating: 5,
+  },
 ];
