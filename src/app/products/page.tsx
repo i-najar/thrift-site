@@ -29,9 +29,9 @@ export default function ProductsPage() {
 
   return (
     <section className="p-6 flex">
-      <h1 className="text-2xl font-bold mb-4">Browse Products</h1>
       {/* Sidebar */}
       <div className="w-64 pr-4">
+        <h1 className="text-2xl font-bold mb-4">Browse Products</h1>
         <FilterAccordion
           filters={filters}
           onFilterChange={handleFilterChange}
