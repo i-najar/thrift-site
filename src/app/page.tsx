@@ -1,19 +1,20 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ProductCarousel } from "@/components/ProductCarousel";
-import { Input } from "@/components/ui/input";
-import { ProductAccordion } from "@/components/ProductAccordion";
+import { LandingCarousel } from "@/components/LandingCarousel";
 import Link from "next/link";
 import { AlertDialogDemo } from "@/components/Alert";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="p-8 space-y-8 mt-20">
+    <main className="p-8 space-y-8 mt-10">
+      <h1 className="text-3xl font-bold text-center">
+        Hi. We're working on the site!
+      </h1>
       {/*Carousel */}
-      <section className="w-6/12 mx-auto flex justify-center items-center">
-        <ProductCarousel
+      <section className="mx-auto flex justify-center items-center">
+        <LandingCarousel
           images={[
             "/images/coat-1.jpg",
             "/images/sneakers-1.jpg",
@@ -21,7 +22,7 @@ export default function Home() {
             "/images/sweater-2.jpeg",
             "/images/trousers-1.jpg",
           ]}
-        ></ProductCarousel>
+        ></LandingCarousel>
       </section>
 
       {/*Accordion */}

@@ -12,7 +12,9 @@ export function Navbar() {
       </Link>
       <div className="flex items-center gap-2">
         <SearchBar />
-        <Button variant="default">Search</Button>
+        <Button className="rounded-none" variant="default">
+          Search
+        </Button>
       </div>
       <div className="space-x-4">
         <Link href="/products" className="text-sm hover:underline">
