@@ -33,7 +33,10 @@ export default function Home() {
       <section className="w-6/12 mx-auto flex justify-center items-center">
         <div className="flex flex-col gap-2">
           <Link href="/products">
-            <Button variant="default">
+            <Button
+              variant="outline"
+              className="rounded-none border-4 text-4xl p-6"
+            >
               Browse
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

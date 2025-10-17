@@ -1,4 +1,7 @@
+"use client";
+
 import * as React from "react";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
   Carousel,
@@ -19,7 +22,7 @@ type LandingCarouselProps = {
 
 export function LandingCarousel({ items }: LandingCarouselProps) {
   return (
-    <Carousel className="w-screen relative">
+    <Carousel opts={{ loop: true }} className="w-screen relative">
       <CarouselContent>
         {items.map((item, index) => (
           <CarouselItem key={index}>
@@ -32,7 +35,9 @@ export function LandingCarousel({ items }: LandingCarouselProps) {
                 priority
               />
               <div className="absolute inset-0 z-10 flex items-center justify-center">
-                <div className="text-white text-5xl font-bold">{item.text}</div>
+                <div className="text-white text-4xl font-bold border-5 border-white p-5 pt-3">
+                  {item.text}
+                </div>
               </div>
             </div>
           </CarouselItem>
@@ -43,3 +48,10 @@ export function LandingCarousel({ items }: LandingCarouselProps) {
     </Carousel>
   );
 }
+
+// <Button
+//   variant="outline"
+//   className="rounded-none font-bold border-5 text-4xl p-7 text-white bg-transparent hover:bg-transparent hover:border-white hover:text-white"
+// >
+//   {item.text}
+// </Button>;
