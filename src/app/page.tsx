@@ -8,19 +8,23 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="p-8 space-y-8 mt-10">
-      <h1 className="text-3xl font-bold text-center">
-        Hi. We're working on the site!
-      </h1>
+    <main className="py-8 px-0 space-y-8 mt-10">
       {/*Carousel */}
       <section className="mx-auto flex justify-center items-center">
         <LandingCarousel
-          images={[
-            "/images/coat-1.jpg",
-            "/images/sneakers-1.jpg",
-            "/images/sweater-1.jpg",
-            "/images/sweater-2.jpeg",
-            "/images/trousers-1.jpg",
+          items={[
+            {
+              src: "/images/products/sweater-2.jpeg",
+              text: "Striped Sweaters",
+            },
+            {
+              src: "/images/products/coat-2.jpg",
+              text: "Coats For Writing Poetry",
+            },
+            {
+              src: "/images/products/coat-3.jpg",
+              text: "Autumn Neutrals",
+            },
           ]}
         ></LandingCarousel>
       </section>
