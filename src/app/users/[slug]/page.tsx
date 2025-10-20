@@ -11,7 +11,6 @@ import { StarRating } from "@/components/StarRating";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList } from "@/components/ui/tabs";
 import { TabsTriggerItem } from "@/components/TabsTriggerItem";
-import { users as allUsers } from "@/data/users";
 
 export default function UserPage() {
   const params = useParams();
@@ -20,23 +19,6 @@ export default function UserPage() {
   if (!user) return notFound();
 
   const userProducts = products.filter((p) => p.userId === user.id);
-
-  const feedback = allUsers.flatMap(
-    (reviewer) =>
-      reviewer.reviews?.flatMap((review) => {
-        const product = userProducts.find((p) => p.slug === review.productSlug);
-        return product
-          ? [
-              {
-                reviewer,
-                product,
-                comment: review.comment,
-                rating: review.rating,
-              },
-            ]
-          : [];
-      }) ?? []
-  );
 
   return (
     <section className="p-6 max-w-6xl mx-auto space-y-10">
@@ -60,17 +42,30 @@ export default function UserPage() {
         </TabsList>
 
         <TabsContent value="posts">
-          {user.photos?.length > 0 ? (
+          {user.posts && user.posts.length > 0 ? (
             <div className="flex gap-6 overflow-x-auto">
-              {user.photos.map((photo, i) => (
-                <Image
-                  key={i}
-                  src={photo}
-                  alt={`Photo of ${user.name}`}
-                  width={200}
-                  height={200}
-                  className="rounded-lg object-cover"
-                />
+              {user.posts.map((post) => (
+                <div
+                  key={post.id}
+                  className="border rounded-none shadow-sm hover:shadow-md transition"
+                >
+                  {post.image && (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={600}
+                      height={400}
+                      className="object-cover"
+                    />
+                  )}
+                  <div className="p-4 space-y-2">
+                    <h3 className="text-xl font-semibold">{post.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {new Date(post.date).toLocaleDateString()}
+                    </p>
+                    <p className="text-muted-foreground">{post.content}</p>
+                  </div>
+                </div>
               ))}
             </div>
           ) : (

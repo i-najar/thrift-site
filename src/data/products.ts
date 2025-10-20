@@ -69,7 +69,7 @@ export const products: Product[] = [
     color: "Brown",
     condition: "New",
     userId: "4",
-    categories: ["bottoms", "trousers"],
+    categories: ["bottoms", "trousers", "pants"],
   },
   {
     id: "5",

@@ -35,7 +35,7 @@ export default function Home() {
           <Link href="/products">
             <Button
               variant="outline"
-              className="rounded-none border-4 text-4xl p-6"
+              className="rounded-none border-4 text-4xl p-6 ml-15"
             >
               Browse
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -43,15 +43,6 @@ export default function Home() {
           </Link>
           <p>Check out today's most popular products!</p>
         </div>
-      </section>
-
-      {/* Alert Dialog */}
-      <section className="text-center">
-        <AlertDialogDemo />
-      </section>
-
-      <section className="text-center text-blue-600">
-        <p>Something Belongs Here!</p>
       </section>
     </main>
   );

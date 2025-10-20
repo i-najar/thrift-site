@@ -4,6 +4,14 @@ export type Review = {
   rating: number;
 };
 
+export type Post = {
+  id: string;
+  title: string;
+  content: string;
+  image?: string;
+  date: string;
+};
+
 export type User = {
   id: string;
   name: string;
@@ -13,6 +21,7 @@ export type User = {
   rating?: number;
   photos?: string[];
   reviews?: Review[];
+  posts?: Post[];
 };
 
 export const users: User[] = [
@@ -42,6 +51,15 @@ export const users: User[] = [
         rating: 4.8,
       },
     ],
+    posts: [
+      {
+        id: "1",
+        title: "Well... Hello",
+        content:
+          "Um, is this thing on? Haha. Hi. I just wanted to wish everyone a happy autumn! I know I'm about a month late, but, you know. I just thought it would be sweet! :)",
+        date: "10/20/2025",
+      },
+    ],
   },
   {
     id: "2",
@@ -60,6 +78,20 @@ export const users: User[] = [
         productSlug: "sweater-2",
         comment: "hmph... not bad...",
         rating: 4,
+      },
+    ],
+    posts: [
+      {
+        id: "1",
+        title: "testing...",
+        content: "ugh... hello?",
+        date: "10/20/2025",
+      },
+      {
+        id: "2",
+        title: "hello does this ",
+        content: "not again...",
+        date: "10/20/2025",
       },
     ],
   },
@@ -85,6 +117,15 @@ export const users: User[] = [
         productSlug: "coat-1",
         comment: "BRR BRR HAHA JK WARMM",
         rating: 5,
+      },
+    ],
+    posts: [
+      {
+        id: "1",
+        title: "WOW",
+        content:
+          "OKAY THIS IS AWESOME. I LOVE BEING ABLE TO SHARE MY THOUGHTS HAHA. THE GREEN SHOE WIZARD KEEPS CONTACTING ME ON MY WHATSAPP... NOT SURE HOW HE GOT MY NUMBER",
+        date: "10/14/2025",
       },
     ],
   },
@@ -142,6 +183,14 @@ export const users: User[] = [
         rating: 4.7,
       },
     ],
+    posts: [
+      {
+        id: "1",
+        title: "e",
+        content: "fkmlsmlkasgknwg9884g9498-3gn99nnnbbbbb",
+        date: "8/3/2025",
+      },
+    ],
   },
   {
     id: "6",
@@ -150,6 +199,15 @@ export const users: User[] = [
     avatar: "/images/avatars/user-6.png",
     bio: "Greetings. My name is John Smith. I like to walk with my legs and look around the environment using my eyes. Many others like you and me have bought the physical goods I am distributing on this website.",
     rating: 4.6,
+    posts: [
+      {
+        id: "1",
+        title: "Greetings.",
+        content:
+          "Salutations to all entities who have used their autonomy to navigate to this webpage that you are watching like most human beings do in this day and age. I would like to extend my gratitude that we oxygen-dependent eukaryotic mammals can use this application hosted on the internet to communicate with each other, as we are social beings.",
+        date: "10/20/2025",
+      },
+    ],
   },
   {
     id: "7",
@@ -158,6 +216,15 @@ export const users: User[] = [
     avatar: "/images/avatars/user-7.png",
     bio: "The Alligator sells products procured by yours truly (The Alligator).",
     rating: 3,
+    posts: [
+      {
+        id: "1",
+        title: "Enough Is Enough.",
+        content:
+          "I tire of the scurrilous attacks on my integrity as a reseller. I do a lot (A LOT) to procure the items I list for sale on my profile. I WILL report you to the moderation team if you decide to engage me with a bitter heart.",
+        date: "10/20/2025",
+      },
+    ],
   },
   {
     id: "8",
