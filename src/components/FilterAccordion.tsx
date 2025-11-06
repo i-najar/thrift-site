@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 type FilterAccordionProps = {
   filters: {
@@ -34,6 +35,7 @@ export function FilterAccordion({
               <input
                 type="checkbox"
                 checked={filters.category.includes(category)}
+                className="appearance-none border-2 w-4 h-4 cursor-pointer checked:bg-black"
                 onChange={() => {
                   if (filters.category.includes(category)) {
                     onFilterChange(
@@ -58,7 +60,8 @@ export function FilterAccordion({
           {sizes.map((size) => (
             <div key={size}>
               <input
-                type="radio"
+                type="checkbox"
+                className="appearance-none border-2 w-4 h-4 cursor-pointer checked:bg-black"
                 checked={filters.size === size}
                 onChange={() => onFilterChange("size", size)}
               />
@@ -75,7 +78,8 @@ export function FilterAccordion({
           {conditions.map((condition) => (
             <div key={condition}>
               <input
-                type="radio"
+                type="checkbox"
+                className="appearance-none border-2 w-4 h-4 cursor-pointer checked:bg-black"
                 checked={filters.condition === condition}
                 onChange={() => onFilterChange("condition", condition)}
               />
@@ -89,11 +93,12 @@ export function FilterAccordion({
       <AccordionItem value="item-4">
         <AccordionTrigger>Price</AccordionTrigger>
         <AccordionContent>
-          <div>
+          <div className="flex flex-col">
             <label>Min Price: </label>
             <input
               type="number"
-              value={filters.price[0]}
+              className="mb-4 p-2 border border-black rounded-none"
+              value={filters.price[0] || ""}
               onChange={(e) =>
                 onFilterChange("price", [
                   Number(e.target.value),
@@ -104,7 +109,8 @@ export function FilterAccordion({
             <label>Max Price: </label>
             <input
               type="number"
-              value={filters.price[1]}
+              className="mb-4 p-2 border border-black rounded-none"
+              value={filters.price[1] || ""}
               onChange={(e) =>
                 onFilterChange("price", [
                   filters.price[0],
@@ -115,8 +121,9 @@ export function FilterAccordion({
           </div>
         </AccordionContent>
       </AccordionItem>
-      <button
-        className="mt-4 px-3 py-2 bg-gray-200 text-sm rounded hover:bg-gray-300"
+      <Button
+        variant={"outline"}
+        className="mt-4 px-3 py-2 bg-black text-sm rounded-none text-white"
         onClick={() =>
           onFilterChange("reset", {
             category: [],
@@ -127,7 +134,7 @@ export function FilterAccordion({
         }
       >
         Clear Filters
-      </button>
+      </Button>
     </Accordion>
   );
 }
