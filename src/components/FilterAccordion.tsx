@@ -5,8 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import { Product } from "@/data/products"; // import the type
-
 type FilterAccordionProps = {
   filters: {
     category: string[];

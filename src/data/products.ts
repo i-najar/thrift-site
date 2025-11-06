@@ -3,6 +3,7 @@ export type Product = {
   name: string;
   image: string;
   description: string;
+  careInstructions: string;
   price: number;
   slug: string;
   rating?: number;
@@ -20,6 +21,8 @@ export const products: Product[] = [
     slug: "sweater-1",
     image: "/images/products/sweater-1.jpg",
     description: "Off-white medium gauge cable knit sweater.",
+    careInstructions:
+      "Gently hand wash with cold water and a mild detergent. Dry flat.",
     price: 59.99,
     rating: 4.5,
     size: "M",
@@ -34,6 +37,7 @@ export const products: Product[] = [
     slug: "sweater-2",
     image: "/images/products/sweater-2.jpeg",
     description: "WICKED BLACK AND WHITE STRIPED SWEATER COMFYYY.",
+    careInstructions: "IDK LOL JUST WEAR ITTTT",
     price: 49.99,
     rating: 3.8,
     size: "L",
@@ -49,6 +53,8 @@ export const products: Product[] = [
     image: "/images/products/coat-1.jpg",
     description:
       "Light brown hooded coat with drawstring designed for bipeds like you and me to wear over our torsos.",
+    careInstructions:
+      "Ambulate towards a local building equipped to remove contamination from the product. You will have to exchange currency to realize this.",
     price: 119.99,
     rating: 4.0,
     size: "XS",
@@ -63,6 +69,7 @@ export const products: Product[] = [
     slug: "trousers-1",
     image: "/images/products/trousers-1.jpg",
     description: "Flared brown trousers.",
+    careInstructions: "Wash and dry as normal.",
     price: 59.99,
     rating: 5,
     size: "M",
@@ -77,6 +84,7 @@ export const products: Product[] = [
     slug: "sneakers-1",
     image: "/images/products/sneakers-1.jpg",
     description: "fkmlmkognpnwagn0gw0gn04ng0wng.",
+    careInstructions: "akpoekgdj109999999999999999999999999999p",
     price: 89.99,
     rating: 5,
     size: "8",
@@ -92,6 +100,8 @@ export const products: Product[] = [
     image: "/images/products/hoodie-1.jpg",
     description:
       "One of the most exquisite members of David B's groundbreaking streetwear collection: Everyday Statements. Procured from the factory itself (don't ask)... HEAVILY discounted at 45%.",
+    careInstructions:
+      "You MUST take this hoodie to one of TWELVE certified tailors, all vetted by the David B corporation to handle their exquiste products, to provide ample care. A home washer/dryer unit will RUIN its integrity.",
     price: 726.99,
     rating: 2,
     size: "XL",
@@ -107,6 +117,8 @@ export const products: Product[] = [
     image: "/images/products/loafers-1.jpg",
     description:
       "FOUND THESE HIKING WITH A BUD OF MINE FROM COLLEGE LAST WEEKEND. PRETTY GOOD CONDITION BUT THEY EMIT THIS WEIRD AURA LOL I WORE THEM ONCE (IM CLEAN I SWEAR) AND I STARTED LEVITATING???",
+    careInstructions:
+      "IDK THEY DISAPPEAR SOMETIMES AND I THINK THEY ARE ALSO WATER RESISTANT",
     price: 109.99,
     rating: 3,
     size: "9",
@@ -122,6 +134,7 @@ export const products: Product[] = [
     image: "/images/products/cardigan-1.jpg",
     description:
       "Gently knit cardigan as though spun by a sartorial muse's thread.",
+    careInstructions: "Honesty.",
     price: 69.99,
     rating: 5,
     size: "S",
@@ -136,6 +149,7 @@ export const products: Product[] = [
     slug: "trousers-2",
     image: "/images/products/trousers-2.jpg",
     description: "Wide-fit chocolate trousers. Still chic.",
+    careInstructions: "Wash warm and dry gently.",
     price: 79.99,
     rating: 4,
     size: "8",

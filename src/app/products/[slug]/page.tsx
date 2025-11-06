@@ -61,9 +61,12 @@ export default function ProductPage() {
       </section>
 
       {/* Product Reviews */}
-      <section className="w-6/12 mx-auto flex justify-center items-center">
-        <ProductReviews productSlug={product.slug} />
-      </section>
+      <div className="flex flex-col items-start justify-center ml-180">
+        <p className="text-2xl font-bold mb-4">Reviews:</p>
+        <section className="w-6/12">
+          <ProductReviews productSlug={product.slug} />
+        </section>
+      </div>
     </main>
   );
 }
