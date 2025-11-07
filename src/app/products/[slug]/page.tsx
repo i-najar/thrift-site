@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+
 import { useParams } from "next/navigation";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ProductCarousel } from "@/components/ProductCarousel";

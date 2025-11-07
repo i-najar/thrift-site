@@ -1,9 +1,8 @@
 "use client";
-import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { LandingCarousel } from "@/components/LandingCarousel";
 import Link from "next/link";
-import { AlertDialogDemo } from "@/components/Alert";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {

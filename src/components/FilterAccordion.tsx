@@ -6,6 +6,15 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 
+type FilterType = "category" | "size" | "condition" | "price" | "reset";
+
+type FilterValues = {
+  category: string[];
+  size: string;
+  condition: string;
+  price: [number, number];
+};
+
 type FilterAccordionProps = {
   filters: {
     category: string[];
@@ -13,7 +22,10 @@ type FilterAccordionProps = {
     condition: string;
     price: [number, number];
   };
-  onFilterChange: (filterType: string, value: any) => void;
+  onFilterChange: (
+    filterType: FilterType,
+    value: string | string[] | number[] | [number, number] | FilterValues
+  ) => void;
 };
 
 export function FilterAccordion({
