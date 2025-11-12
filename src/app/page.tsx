@@ -40,7 +40,7 @@ export default function Home() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
-          <p>Check out today's most popular products!</p>
+          <p>Check out today&apos;s most popular products!</p>
         </div>
       </section>
     </main>

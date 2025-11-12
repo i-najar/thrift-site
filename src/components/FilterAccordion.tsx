@@ -5,28 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-
-type FilterType = "category" | "size" | "condition" | "price" | "reset";
-
-type FilterValues = {
-  category: string[];
-  size: string;
-  condition: string;
-  price: [number, number];
-};
-
-type FilterAccordionProps = {
-  filters: {
-    category: string[];
-    size: string;
-    condition: string;
-    price: [number, number];
-  };
-  onFilterChange: (
-    filterType: FilterType,
-    value: string | string[] | number[] | [number, number] | FilterValues
-  ) => void;
-};
+import { FilterAccordionProps } from "@/types/filters.types";
 
 export function FilterAccordion({
   filters,

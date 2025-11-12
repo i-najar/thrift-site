@@ -3,20 +3,29 @@
 import { useState } from "react";
 import { ProductCard } from "@/components/ProductCard";
 import { FilterAccordion } from "@/components/FilterAccordion";
+import { FilterType, FilterValues } from "@/types/filters.types";
 import { filterProducts } from "@/lib/utils";
 import { products } from "@/data/products";
 
 export default function ProductsPage() {
-  const [filters, setFilters] = useState({
+  const [filters, setFilters] = useState<FilterValues>({
     category: [] as string[],
     size: "",
     condition: "",
     price: [0, 1000] as [number, number],
   });
 
-  const handleFilterChange = (filterType: string, value: any) => {
+  const handleFilterChange = (
+    filterType: FilterType,
+    value: string | string[] | [number, number] | number[] | FilterValues
+  ) => {
     if (filterType === "reset") {
-      setFilters(value);
+      setFilters({
+        category: [] as string[],
+        size: "",
+        condition: "",
+        price: [0, 1000] as [number, number],
+      });
     } else {
       setFilters((prev) => ({
         ...prev,
