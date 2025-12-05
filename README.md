@@ -4,6 +4,8 @@
 
 Hi! This is a little demo of an online thrift store I used to familiarize myself with Next.js, TypeScript, Tailwind, and ShadCN UI. 
 
+You can check out a demo at: https://thrift-site-dep.vercel.app/
+
 (Note this is a work in progress and will be updated periodically).
 
 ![Landing Page](https://github.com/i-najar/thrift-site/blob/main/threadbaresc.png)
