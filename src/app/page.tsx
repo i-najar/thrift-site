@@ -29,15 +29,18 @@ export default function Home() {
       </section>
 
       {/*Accordion */}
-      <section className="w-6/12 mx-auto flex justify-center items-center">
-        <div className="flex flex-col gap-2">
+      <section className="max-w-screen-md mx-auto flex justify-center items-center pt-8 pb-12">
+        <div className="flex flex-col gap-8 items-center text-center">
           <Link href="/products">
             <Button
               variant="outline"
-              className="rounded-none border-4 text-4xl p-6 ml-15"
+              className="relative overflow-hidden group rounded-none border-4 text-4xl font-bold p-6  border-black"
             >
-              Browse
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <span className="absolute inset-0 bg-black -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+              <span className="relative z-10 flex items-center group-hover:text-white transition-colors duration-300">
+                <p className="pb-1">Browse</p>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
             </Button>
           </Link>
           <p>Check out today&apos;s most popular products!</p>

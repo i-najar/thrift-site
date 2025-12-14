@@ -20,30 +20,31 @@ export default function ProductPage() {
   if (!product) return notFound();
 
   return (
-    <main className="p-8 space-y-8 mt-20">
+    <main className="w-full p-4 md:p-8 space-y-8 mt-[80px] max-w-screen-lg mx-auto">
       {/* Product Detail Section */}
 
-      <section className="flex flex-col lg:flex-row justify-center items-start max-w-screen-lg mx-auto">
+      <section className="flex flex-col lg:flex-row lg:gap-8">
         {/* Carousel */}
-        <div className="w-full lg:w-auto mr-10 pr-5">
-          <ProductCarousel images={[product.image]}></ProductCarousel>
+        <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
+          <ProductCarousel images={[product.image]} />
         </div>
 
         {/* Product Info */}
-        <div className="w-full lg:w-auto space-y-3">
+        <div className="w-full lg:w-1/2 space-y-3">
           <h1 className="text-2xl font-semibold">{product.name}</h1>
+          <p className="text-xl font-bold">{product.price.toFixed(2)}</p>
           <p className="text-muted-foreground">Size: {product.size}</p>
           <p className="text-muted-foreground">Color: {product.color}</p>
           <p className="text-muted-foreground">
             Condition: {product.condition}
           </p>
-          <p className="text-xl font-bold">{product.price.toFixed(2)}</p>
+
           {user && (
             <Link
               href={`/users/${user.slug}`}
               className="flex items-center space-x-2 group mt-2 transition hover:text-blue-600"
             >
-              <Avatar className="w-6 h-6">
+              <Avatar className="w-8 h-8">
                 <AvatarImage src={user.avatar} alt={user.name} />
                 <AvatarFallback>{user.name[0]}</AvatarFallback>
               </Avatar>
@@ -56,14 +57,14 @@ export default function ProductPage() {
       </section>
 
       {/* Accordion */}
-      <section className="w-6/12 mx-auto flex justify-center items-center">
+      <section className="w-full pt-4 overflow-x-hidden">
         <ProductAccordion product={product} />
       </section>
 
       {/* Product Reviews */}
-      <div className="flex flex-col items-start justify-center ml-180">
+      <div className="w-full pt-4">
         <p className="text-2xl font-bold mb-4">Reviews:</p>
-        <section className="w-6/12">
+        <section className="w-full">
           <ProductReviews productSlug={product.slug} />
         </section>
       </div>
