@@ -43,30 +43,36 @@ export default function UserPage() {
 
         <TabsContent value="posts">
           {user.posts && user.posts.length > 0 ? (
-            <div className="flex gap-6 overflow-x-auto">
-              {user.posts.map((post) => (
-                <div
-                  key={post.id}
-                  className="border rounded-none shadow-sm hover:shadow-md transition"
-                >
-                  {post.image && (
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      width={600}
-                      height={400}
-                      className="object-cover"
-                    />
-                  )}
-                  <div className="p-4 space-y-2">
-                    <h3 className="text-xl font-semibold">{post.title}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {new Date(post.date).toLocaleDateString()}
-                    </p>
-                    <p className="text-muted-foreground">{post.content}</p>
+            <div className="flex flex-col gap-6">
+              {user.posts
+                .sort((a, b) => b.id.localeCompare(a.id))
+                .map((post) => (
+                  <div
+                    key={post.id}
+                    className="border rounded-none shadow-sm hover:shadow-md transition"
+                  >
+                    {post.image && (
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        width={600}
+                        height={400}
+                        className="object-cover"
+                      />
+                    )}
+                    <div className="p-4 space-y-2">
+                      <h3 className="text-xl font-semibold">{post.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {new Date(post.date).toLocaleDateString()}
+                      </p>
+                      <div className="text-muted-foreground">
+                        {post.content.split("\n").map((line, index) => (
+                          <p key={index}>{line}</p>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           ) : (
             <p className="text-muted-foreground">No posts available.</p>

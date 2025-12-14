@@ -120,3 +120,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes ribbonScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-ribbon {
+  animation: ribbonScroll 50s linear infinite;
+}
+
+.animate-ribbon:hover {
+  animation-play-state: paused;
+}

@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="py-8 px-0 space-y-8 mt-10">
+    <main className="py-8 px-0 space-y-8">
       {/*Carousel */}
       <section className="mx-auto flex justify-center items-center">
         <LandingCarousel

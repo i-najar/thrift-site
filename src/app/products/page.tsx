@@ -41,7 +41,7 @@ export default function ProductsPage() {
   const filteredProducts = filterProducts(products, filters);
 
   return (
-    <section className="p-6 flex md:p-4 flex-col md:flex-row">
+    <section className="mt-5 p-6 flex md:p-4 flex-col md:flex-row">
       <div className="flex justify-between items-center mb-4 md:hidden">
         <h1 className="text-2xl font-bold">Browse Products</h1>
         <Button variant="outline" onClick={() => setIsMobileFilterOpen(true)}>

@@ -93,6 +93,13 @@ export const users: User[] = [
         content: "not again...",
         date: "10/20/2025",
       },
+      {
+        id: "3",
+        title: "holiday season.",
+        content:
+          "i wrote a poem about the holidays:\ngrandma made turkey\n and i didnt like it...\n cousins are late...\n again...",
+        date: "12/15/2025",
+      },
     ],
   },
   {
@@ -127,6 +134,13 @@ export const users: User[] = [
           "OKAY THIS IS AWESOME. I LOVE BEING ABLE TO SHARE MY THOUGHTS HAHA. THE GREEN SHOE WIZARD KEEPS CONTACTING ME ON MY WHATSAPP... NOT SURE HOW HE GOT MY NUMBER",
         date: "10/14/2025",
       },
+      {
+        id: "2",
+        title: "GREEN SHOE WIZARD UPDATE",
+        content:
+          "THE WIZARD FOUND MY INSTAGRAM AND HES JUST COMMENTING GIFS OF GREEN SHOES UNDER EVERY POST??? I DMED HIM AND HE ONLY REPLIED WITH '...'",
+        date: "12/14/2025",
+      },
     ],
   },
   {
@@ -134,7 +148,7 @@ export const users: User[] = [
     name: "Mer",
     slug: "mer",
     avatar: "/images/avatars/user-4.png",
-    bio: "emptying out my 2024 wardrobe. ill throw in a bonus if you're a prev customer ✨",
+    bio: "emptying out my wardrobe. ill throw in a bonus if you're a prev customer ✨",
     rating: 4.5,
     reviews: [
       {
@@ -151,6 +165,15 @@ export const users: User[] = [
         productSlug: "sweater-2",
         comment: "comfy but the packaging was kinda meh",
         rating: 4.2,
+      },
+    ],
+    posts: [
+      {
+        id: "1",
+        title: "Wardrobe Update 🌟",
+        content:
+          "currently stocking up on mittens, gloves, and scarves for winter, expect them in the following weeks ❄️ (discount if you buy 2 or more!)",
+        date: "12/12/2025",
       },
     ],
   },
@@ -190,6 +213,13 @@ export const users: User[] = [
         content: "fkmlsmlkasgknwg9884g9498-3gn99nnnbbbbb",
         date: "8/3/2025",
       },
+      {
+        id: "2",
+        title: "kmmkmm00994",
+        content:
+          "jfe0t8310t9-jjfajf 'SANTA CLAUS' jjieoide-98y9ht8749yht98hyhtu7wei8j",
+        date: "11/20/2025",
+      },
     ],
   },
   {
@@ -221,8 +251,15 @@ export const users: User[] = [
         id: "1",
         title: "Enough Is Enough.",
         content:
-          "I tire of the scurrilous attacks on my integrity as a reseller. I do a lot (A LOT) to procure the items I list for sale on my profile. I WILL report you to the moderation team if you decide to engage me with a bitter heart.",
+          "I tire of the scurrilous attacks on my integrity as a reseller. I do a lot (A LOT) to procure the items I list for sale on my profile. I WILL report you to the moderation team if you decide to engage me with a bitter heart. - The Alligator",
         date: "10/20/2025",
+      },
+      {
+        id: "2",
+        title: "Big Things Are Coming...",
+        content:
+          "Prepare yourselves for an EXCLUSIVE drop. You may have seen a preview if you're subscribed to my Substack (I encourage you to DM me for the link... You will get access to never-before-seen luxury clothes AND the chance to win a raffle for a mug signed by YOURS TRULY...)... It is going to be, by account of MULTIPLE industry TITANS, the MOST-sought-after item of 2026. Only TWO HUNDRED were made by the yet-to-be-revealed designer. As for how many I was graciously given? Well, you'll have to wait and see... Stay tuned - The Alligator",
+        date: "12/10/2025",
       },
     ],
   },

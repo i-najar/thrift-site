@@ -29,7 +29,7 @@ export const products: Product[] = [
     color: "Off-white",
     condition: "New",
     userId: "4",
-    categories: ["knitwear", "sweater"],
+    categories: ["tops", "knitwear", "sweater"],
   },
   {
     id: "2",
@@ -44,7 +44,7 @@ export const products: Product[] = [
     color: "Striped B&W",
     condition: "Used",
     userId: "3",
-    categories: ["sweater", "jumper"],
+    categories: ["tops", "sweater", "jumper"],
   },
   {
     id: "3",

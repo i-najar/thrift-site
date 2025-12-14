@@ -24,9 +24,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
           {/* Hover Effect */}
           <div className="absolute inset-0 bg-white/80 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
-            <Button variant="default" className="rounded-none">
-              View
-            </Button>
+            <Button variant="default">View</Button>
           </div>
         </div>
 

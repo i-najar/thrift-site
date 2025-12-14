@@ -11,8 +11,8 @@ export function FilterAccordion({
   filters,
   onFilterChange,
 }: FilterAccordionProps) {
-  const categories = ["knitwear", "sweater", "pants"];
-  const sizes = ["S", "M", "L", "XL"];
+  const categories = ["outerwear", "knitwear", "tops", "pants", "footwear"];
+  const sizes = ["XS", "S", "M", "L", "XL"];
   const conditions = ["New", "Used", "Worn"];
 
   return (
@@ -26,7 +26,7 @@ export function FilterAccordion({
               <input
                 type="checkbox"
                 checked={filters.category.includes(category)}
-                className="appearance-none border-2 w-4 h-4 cursor-pointer checked:bg-black"
+                className="appearance-none border-2 w-4 h-4 mr-1 cursor-pointer checked:bg-black"
                 onChange={() => {
                   if (filters.category.includes(category)) {
                     onFilterChange(
@@ -38,7 +38,7 @@ export function FilterAccordion({
                   }
                 }}
               />
-              <label>{category}</label>
+              <label className="capitalize">{category}</label>
             </div>
           ))}
         </AccordionContent>
@@ -52,7 +52,7 @@ export function FilterAccordion({
             <div key={size}>
               <input
                 type="checkbox"
-                className="appearance-none border-2 w-4 h-4 cursor-pointer checked:bg-black"
+                className="appearance-none border-2 w-4 h-4 mr-1 cursor-pointer checked:bg-black"
                 checked={filters.size === size}
                 onChange={() => onFilterChange("size", size)}
               />
@@ -70,7 +70,7 @@ export function FilterAccordion({
             <div key={condition}>
               <input
                 type="checkbox"
-                className="appearance-none border-2 w-4 h-4 cursor-pointer checked:bg-black"
+                className="appearance-none border-2 w-4 h-4 mr-1 cursor-pointer checked:bg-black"
                 checked={filters.condition === condition}
                 onChange={() => onFilterChange("condition", condition)}
               />
