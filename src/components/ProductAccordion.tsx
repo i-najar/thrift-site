@@ -13,7 +13,7 @@ type ProductAccordionProps = {
 
 export function ProductAccordion({ product }: ProductAccordionProps) {
   return (
-    <Accordion type="single" collapsible className="w-2xl pl-3">
+    <Accordion type="single" collapsible className="pl-3">
       <AccordionItem value="item-1">
         <AccordionTrigger>Product Description</AccordionTrigger>
         <AccordionContent>{product.description}</AccordionContent>
