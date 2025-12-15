@@ -38,7 +38,7 @@ export function UserFeedback({ userId }: UserFeedbackProps) {
       {reviews.map((r, i) => (
         <div
           key={i}
-          className="flex justify-between items-start border p-4 gap-4"
+          className="flex justify-between items-start border p-4 gap-4 break-all"
         >
           {/* Left side: avatar + text */}
           <div className="flex gap-4">
