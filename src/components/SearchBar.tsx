@@ -55,7 +55,7 @@ export function SearchBar() {
     <input
       type="text"
       placeholder={`Search for ${text}`}
-      className="px-4 py-2 rounded-none border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black w-140"
+      className="px-4 py-2 rounded-none border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black flex flex-grow"
     />
   );
 }

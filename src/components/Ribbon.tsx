@@ -33,7 +33,7 @@ export default function Ribbon({ messages = [] }: RibbonProps) {
   }
 
   return (
-    <div className="relative overflow-hidden bg-red-800 text-white py-2 px-4 z-10">
+    <div className="relative overflow-hidden bg-red-800 text-white py-2 px-4 z-10 mt-[70px]">
       <div className="animate-ribbon flex items-center py-2 px-4 whitespace-nowrap w-max">
         <span className="flex shrink-0">{passContent}</span>
         <span className="flex shrink-0">{passContent}</span>
